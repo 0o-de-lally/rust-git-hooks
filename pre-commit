@@ -1,0 +1,35 @@
+#!/bin/bash
+
+cargo fmt --all && cargo clippy --workspace --tests --fix --allow-dirty
+
+# Define a list of posh British first names
+FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupert" "Crispin" "Basil" "Reginald" "Archibald")
+
+# Define a list of obscure or pre-modern English animal names
+ANIMALS=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern")
+
+# Define a list of surname prefixes
+PREFIXES=("Mc" "Mac" "Von" "O'" "De" "Fitz" "Le")
+
+# Generate random indices for the lists
+RANDOM_FIRST_NAME=${FIRST_NAMES[$RANDOM % ${#FIRST_NAMES[@]}]}
+RANDOM_ANIMAL=${ANIMALS[$RANDOM % ${#ANIMALS[@]}]}
+RANDOM_PREFIX=${PREFIXES[$RANDOM % ${#PREFIXES[@]}]}
+
+# Combine to create a full name
+RANDOM_SURNAME="$RANDOM_PREFIX$RANDOM_ANIMAL"
+FULL_NAME="$RANDOM_FIRST_NAME $RANDOM_SURNAME"
+
+# Generate an email address
+RANDOM_EMAIL="$(echo $FULL_NAME | tr ' ' '_' | tr '[:upper:]' '[:lower:]')@github.com"
+
+# Set the author and committer information
+git config user.name "$FULL_NAME"
+git config user.email "$RANDOM_EMAIL"
+
+# Output the selected author details
+echo "Randomly generated author:"
+echo "Name: $FULL_NAME"
+echo "Email: $RANDOM_EMAIL"
+
+exit 0
