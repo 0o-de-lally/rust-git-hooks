@@ -2,22 +2,22 @@
 
 cargo fmt --all && cargo clippy --workspace --tests --fix --allow-dirty
 
-# Define a list of posh British first names
+# Define a list names
 FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupert" "Crispin" "Basil" "Reginald" "Archibald" "Gianna" "Nella" "Franci" "Caty" "Lucietta" "Mariella" "Gabi" "Vale" "Rosina" "Giulietta" "Bea" "Sandra" "Isa" "Nora" "Chiaretta" "Sofi" "Raffa" "Paoletta" "Caro" "Sere")
 
-# Define a list of obscure or pre-modern English animal names
-ANIMALS=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante" "Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato" "Tempo")
+# Define a list of surnames
+SURNAMES=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante" "Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato" "Tempo")
 
 # Define a list of surname prefixes
-PREFIXES=("Mc" "Mac" "Von" "O'" "De" "Fitz" "Le" "di" "" "" "" "")
+PREFIXES=("Mc" "Mac" "Saint" "Von" "O'" "De" "Fitz" "Le" "di" "" "" "" "")
 
 # Generate random indices for the lists
 RANDOM_FIRST_NAME=${FIRST_NAMES[$RANDOM % ${#FIRST_NAMES[@]}]}
-RANDOM_ANIMAL=${ANIMALS[$RANDOM % ${#ANIMALS[@]}]}
+RANDOM_SURNAME=${SURNAMES[$RANDOM % ${#ANIMALS[@]}]}
 RANDOM_PREFIX=${PREFIXES[$RANDOM % ${#PREFIXES[@]}]}
 
 # Combine to create a full name
-RANDOM_SURNAME="$RANDOM_PREFIX$RANDOM_ANIMAL"
+RANDOM_SURNAME="$RANDOM_PREFIX$RANDOM_SURNAME"
 FULL_NAME="$RANDOM_FIRST_NAME $RANDOM_SURNAME"
 
 # Generate an email address
