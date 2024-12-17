@@ -9,7 +9,7 @@ FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupe
 SURNAMES=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante" "Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato" "Tempo")
 
 # Define a list of surname prefixes
-PREFIXES=("Mc" "Mac" "Saint" "Von" "O'" "De" "Fitz" "Le" "di" "" "" "" "")
+PREFIXES=("Mc" "Mac" "Saint-" "Von " "O'" "De " "Fitz " "Le " "di " "" "" "" "")
 
 # Generate random indices for the lists
 RANDOM_FIRST_NAME=${FIRST_NAMES[$RANDOM % ${#FIRST_NAMES[@]}]}
