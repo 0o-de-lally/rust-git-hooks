@@ -3,17 +3,20 @@
 cargo fmt --all && cargo clippy --workspace --tests --fix --allow-dirty
 
 # Define a list names
-FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupert" "Crispin" "Basil" "Reginald" "Archibald" "Gianna" "Nella" "Franci" "Caty" "Lucietta" "Mariella" "Gabi" "Vale" "Rosina" "Giulietta" "Bea" "Sandra" "Isa" "Nora" "Chiaretta" "Sofi" "Raffa" "Paoletta" "Caro" "Sere")
+FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupert" "Crispin" "Basil" "Reginald" "Archibald" "Gianna" "Nella" "Franci" "Caty" "Lucietta"
+"Mariella" "Gabi" "Vale" "Rosina" "Giulietta" "Bea" "Sandra" "Isa" "Nora" "Chiaretta" "Sofi" "Raffa" "Paoletta" "Caro" "Sere")
 
 # Define a list of surnames
-SURNAMES=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante" "Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato" "Tempo")
+SURNAMES=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante"
+"Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato"
+"Tempo")
 
 # Define a list of surname prefixes
-PREFIXES=("Mc" "Mac" "Saint-" "Von " "O'" "De " "Fitz " "Le " "di " "" "" "" "")
+PREFIXES=("" "" "" "" "" "Mc" "Mac" "Saint " "Von " "O'" "De " "Fitz " "Le" "di ")
 
 # Generate random indices for the lists
 RANDOM_FIRST_NAME=${FIRST_NAMES[$RANDOM % ${#FIRST_NAMES[@]}]}
-RANDOM_SURNAME=${SURNAMES[$RANDOM % ${#ANIMALS[@]}]}
+RANDOM_SURNAME=${SURNAMES[$RANDOM % ${#SURNAMES[@]}]}
 RANDOM_PREFIX=${PREFIXES[$RANDOM % ${#PREFIXES[@]}]}
 
 # Combine to create a full name
