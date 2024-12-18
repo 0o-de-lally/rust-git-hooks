@@ -4,12 +4,12 @@ cargo fmt --all && cargo clippy --workspace --tests --fix --allow-dirty
 
 # Define a list names
 FIRST_NAMES=("Cholmondeley" "Peregrine" "Montague" "Algernon" "Beauregard" "Rupert" "Crispin" "Basil" "Reginald" "Archibald" "Gianna" "Nella" "Franci" "Caty" "Lucietta"
-"Mariella" "Gabi" "Vale" "Rosina" "Giulietta" "Bea" "Sandra" "Isa" "Nora" "Chiaretta" "Sofi" "Raffa" "Paoletta" "Caro" "Sere")
+"Mariella" "Gabi" "Vale" "Rosina" "Giulietta" "Bea" "Sandra" "Isa" "Nora" "Chiaretta" "Sofi" "Raffa" "Paoletta" "Caro" "Sere" "Weibe")
 
 # Define a list of surnames
 SURNAMES=("Brock" "Urchin" "Beaver" "Cony" "Coney" "Hart" "Hind" "Stag" "Leveret" "Hobby" "Marten" "Polecat" "Wren" "Heron" "Bittern" "Allegro" "Adagio" "Andante"
 "Crescendo" "Diminuendo" "Forte" "Piano" "Legato" "Staccato" "Presto" "Lento" "Vivace" "Mezzo" "Sforzando" "Ritardando" "Accelerando" "Fortissimo" "Pianissimo" "Rubato"
-"Tempo")
+"Tempo" "Beavington")
 
 # Define a list of surname prefixes
 PREFIXES=("" "" "" "" "" "Mc" "Mac" "Saint " "Von " "O'" "De " "Fitz " "Le" "di ")
